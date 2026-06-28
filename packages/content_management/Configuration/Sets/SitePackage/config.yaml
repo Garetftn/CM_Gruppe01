@@ -1,0 +1,4 @@
+name: uni-trier/content-management
+label: 'Content Management'
+dependencies:
+  - bootstrap-package/full

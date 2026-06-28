@@ -1,0 +1,24 @@
+base: 'https://team01.wi1cm.uni-trier.de/public'
+dependencies:
+  - bootstrap-package/full
+  - bootstrap-package/backend-layouts
+  - bootstrap-package/content-elements
+  - bootstrap-package/rte
+  - typo3/seo-sitemap
+  - typo3/email
+  - typo3/felogin
+  - uni-trier/content-management
+  - in2code/powermail-main
+  - nitsan/ns-openstreetmap
+  - tpwd/ke_search
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+rootPageId: 1
+websiteTitle: ContentMangement

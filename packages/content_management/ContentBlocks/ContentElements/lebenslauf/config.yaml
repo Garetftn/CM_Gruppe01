@@ -1,0 +1,206 @@
+name: niso/lebenslauf
+typeName: niso_lebenslauf
+group: default
+prefixFields: true
+prefixType: full
+
+fields:
+  -
+    identifier: header
+    useExistingField: true
+    label: "Überschrift"
+
+  -
+    identifier: person_tab
+    type: Tab
+    label: "Persönliche Daten"
+
+  -
+    identifier: nachname
+    type: Text
+    label: "Name"
+    required: true
+
+  -
+    identifier: vorname
+    type: Text
+    label: "Vorname"
+    required: true
+
+  -
+    identifier: strasse
+    type: Text
+    label: "Straße"
+
+  -
+    identifier: plz
+    type: Text
+    label: "PLZ"
+
+  -
+    identifier: ort
+    type: Text
+    label: "Ort"
+
+  -
+    identifier: geburtsdatum
+    type: Text
+    label: "Geburtsdatum"
+
+  -
+    identifier: email
+    type: Email
+    label: "E-Mail"
+
+
+  -
+    identifier: ausbildung_tab
+    type: Tab
+    label: "Ausbildung"
+
+  -
+    identifier: ausbildung
+    type: Collection
+    label: "Ausbildung"
+
+    fields:
+      -
+        identifier: zeitraum
+        type: Text
+        label: "Zeitraum"
+
+      - identifier: abschluss
+        type: Text
+        label: "Abschluss"
+
+      - identifier: einrichtung
+        type: Text
+        label: "Einrichtung"
+
+      - identifier: beschreibung
+        type: Textarea
+        label: "Beschreibung"
+
+  -
+    identifier: erfahrung_tab
+    type: Tab
+    label: "Praktische Erfahrung"
+
+  - identifier: erfahrung
+    type: Collection
+    label: "Praktische Erfahrung"
+
+    fields:
+      - identifier: zeitraum
+        type: Text
+        label: "Zeitraum"
+
+      - identifier: arbeitgeber
+        type: Text
+        label: "Arbeitgeber"
+
+      - identifier: position
+        type: Text
+        label: "Position"
+
+      - identifier: ort
+        type: Text
+        label: "Ort"
+
+      - identifier: taetigkeiten
+        type: Textarea
+        label: "Tätigkeiten"
+
+
+  - identifier: kenntnisse_tab
+    type: Tab
+    label: "Kenntnisse"
+
+  - identifier: itkenntnisse
+    type: Textarea
+    label: "IT-Kenntnisse"
+
+  -
+    identifier: sprachen
+    type: Textarea
+    label: "Sprachen"
+
+
+  -
+    identifier: ehrenamt_tab
+    type: Tab
+    label: "Ehrenamt"
+
+  -
+    identifier: ehrenamt
+    type: Collection
+    label: "Ehrenamt"
+
+    fields:
+      - identifier: zeitraum
+        type: Text
+        label: "Zeitraum"
+
+      - identifier: organisation
+        type: Text
+        label: "Organisation"
+
+      - identifier: beschreibung
+        type: Textarea
+        label: "Beschreibung"
+
+
+  -
+    identifier: veroeffentlichungen_tab
+    type: Tab
+    label: "Veröffentlichungen"
+
+  -
+    identifier: veroeffentlichungen
+    type: Collection
+    label: "Veröffentlichungen"
+
+    fields:
+      - identifier: titel
+        type: Text
+        label: "Titel"
+
+      - identifier: link
+        type: Link
+        label: "Link"
+
+
+  -
+    identifier: stipendium_tab
+    type: Tab
+    label: "Stipendium"
+
+  -
+    identifier: stipendium
+    type: Collection
+    label: "Stipendium"
+
+    fields:
+      -
+        identifier: bezeichnung
+        type: Text
+        label: "Bezeichnung"
+
+      - identifier: zeitraum
+        type: Text
+        label: "Zeitraum"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

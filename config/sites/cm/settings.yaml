@@ -1,0 +1,15 @@
+page.logo.file: fileadmin/cm-logo.svg
+page.theme.navigation.dropdown.icon.width: 20
+page.theme.navigation.dropdown.icon.height: 20
+page.theme.breadcrumb.enable: false
+page.theme.breadcrumb.icon.enable: false
+page.theme.navigation.icon.width: 25
+page.theme.navigation.icon.height: 25
+page.theme.copyright.text: '© 2026 Portfolio Website – Universität Trier'
+plugin.bootstrap_package.settings.scss.link-color: $secondary
+plugin.tx_powermail.settings.styles.framework.submitClasses: 'btn btn-secondary mt-4'
+plugin.tx_powermail.settings.styles.framework.labelClasses: 'form-label powermail_label mt-3'
+plugin.tx_powermail.settings.styles.framework.numberOfColumns: 1
+plugin.tx_powermail.settings.styles.framework.fieldAndLabelWrappingClasses: col-md-10
+plugin.bootstrap_package.settings.scss.font-family-sans-serif: '"#{$google-webfont}", inter'
+page.theme.googleFont.font: Inter

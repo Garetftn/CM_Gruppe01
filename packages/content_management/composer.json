@@ -1,0 +1,32 @@
+{
+    "name": "uni-trier/content-management",
+    "type": "typo3-cms-extension",
+    "description": "Site Package",
+    "homepage": "https://team01.wi1cm.uni-trier.de/public/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Sophia Lano",
+            "email": "s3solano@uni-trier.de",
+            "homepage": "https://team01.wi1cm.uni-trier.de/public/"
+        }
+    ],
+    "require": {
+        "bk2k/bootstrap-package": "^16.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniTrier\\ContentManagement\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "content_management",
+            "Package": {
+                "providesPackages": {}
+            }
+        }
+    }
+}
