@@ -11,6 +11,8 @@ dependencies:
   - in2code/powermail-main
   - nitsan/ns-openstreetmap
   - tpwd/ke_search
+  - niso/lebenslauf
+  - contentmanagement/content-blocks-bundle
 languages:
   -
     title: English

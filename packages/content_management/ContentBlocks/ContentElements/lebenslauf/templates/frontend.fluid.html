@@ -4,6 +4,239 @@
     data-namespace-typo3-fluid="true"
 >
 
-Frontend template for Content Block: niso/lebenslauf<br>
-{data.header}
+<div class="container my-5"
+     itemscope
+     itemtype="https://schema.org/Person">
+
+    <f:if condition="{data.header}">
+        <h1 class="mb-4">{data.header}</h1>
+    </f:if>
+
+    <h2 class="mb-3" itemprop="name">
+        {data.vorname} {data.nachname}
+    </h2>
+
+    <section class="mb-5">
+        <h3 class="border-bottom pb-2 mb-3">Persönliche Daten</h3>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <p itemprop="address"
+                   itemscope
+                   itemtype="https://schema.org/PostalAddress">
+
+                    <strong>Adresse</strong><br>
+
+                    <span itemprop="streetAddress">
+                        {data.strasse}
+                    </span><br>
+
+                    <span itemprop="postalCode">
+                        {data.plz}
+                    </span>
+
+                    <span itemprop="addressLocality">
+                        {data.ort}
+                    </span>
+
+                </p>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <p>
+                    <strong>Geburtsdatum</strong><br>
+                    <span itemprop="birthDate">
+                        {data.geburtsdatum}
+                    </span>
+                </p>
+
+                <p>
+                    <strong>E-Mail</strong><br>
+                    <a href="mailto:{data.email}"
+                       itemprop="email">
+                        {data.email}
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+
+        <h3 class="border-bottom pb-2 mb-3">Ausbildung</h3>
+
+        <div itemprop="alumniOf">
+
+            <f:for each="{data.ausbildung}" as="eintrag">
+
+                <div class="mb-4">
+
+                    <h5 class="mb-1">{eintrag.abschluss}</h5>
+
+                    <div class="text-muted">
+                        {eintrag.zeitraum}
+                    </div>
+
+                    <div>
+                        {eintrag.einrichtung}
+                    </div>
+
+                    <f:if condition="{eintrag.beschreibung}">
+                        <p class="mt-2">
+                            {eintrag.beschreibung}
+                        </p>
+                    </f:if>
+
+                </div>
+
+            </f:for>
+
+        </div>
+
+    </section>
+
+    <section class="mb-5">
+
+        <h3 class="border-bottom pb-2 mb-3">
+            Praktische Erfahrung
+        </h3>
+
+        <div itemprop="worksFor">
+
+            <f:for each="{data.erfahrung}" as="job">
+
+                <div class="mb-4">
+
+                    <h5 class="mb-1">
+                        {job.position}
+                    </h5>
+
+                    <div class="text-muted">
+                        {job.zeitraum}
+                    </div>
+
+                    <div>
+                        {job.arbeitgeber}
+                        <f:if condition="{job.ort}">
+                            – {job.ort}
+                        </f:if>
+                    </div>
+
+                    <f:if condition="{job.taetigkeiten}">
+                        <p class="mt-2">
+                            {job.taetigkeiten}
+                        </p>
+                    </f:if>
+
+                </div>
+
+            </f:for>
+
+        </div>
+
+    </section>
+
+    <section class="mb-5">
+
+        <h3 class="border-bottom pb-2 mb-3">
+            Kenntnisse
+        </h3>
+
+        <p>
+            <strong>IT-Kenntnisse</strong><br>
+            {data.itkenntnisse}
+        </p>
+
+        <p>
+            <strong>Sprachen</strong><br>
+            {data.sprachen}
+        </p>
+
+    </section>
+
+    <section class="mb-5">
+
+        <h3 class="border-bottom pb-2 mb-3">
+            Ehrenamt
+        </h3>
+
+        <div itemprop="memberOf">
+
+            <f:for each="{data.ehrenamt}" as="amt">
+
+                <div class="mb-4">
+
+                    <h5 class="mb-1">
+                        {amt.organisation}
+                    </h5>
+
+                    <div class="text-muted">
+                        {amt.zeitraum}
+                    </div>
+
+                    <p class="mt-2">
+                        {amt.beschreibung}
+                    </p>
+
+                </div>
+
+            </f:for>
+
+        </div>
+
+    </section>
+
+    <section class="mb-5">
+
+        <h3 class="border-bottom pb-2 mb-3">
+            Veröffentlichungen
+        </h3>
+
+        <ul>
+
+            <f:for each="{data.veroeffentlichungen}" as="pub">
+                <li class="mb-2" itemprop="subjectOf">
+                    <strong>{pub.titel}</strong>
+                    <f:if condition="{pub.link}">
+                        <br>
+                        <f:link.typolink parameter="{pub.link}" target="_blank" class="link-page">
+                            Veröffentlichung öffnen
+                        </f:link.typolink>
+                    </f:if>
+                </li>
+            </f:for>
+
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h3 class="border-bottom pb-2 mb-3">
+            Stipendium
+        </h3>
+
+        <f:for each="{data.stipendium}" as="stip">
+
+            <div class="mb-3">
+
+                <strong>{stip.bezeichnung}</strong><br>
+
+                <span class="text-muted">
+                    {stip.zeitraum}
+                </span>
+
+            </div>
+
+        </f:for>
+
+    </section>
+
+</div>
+
 </html>
