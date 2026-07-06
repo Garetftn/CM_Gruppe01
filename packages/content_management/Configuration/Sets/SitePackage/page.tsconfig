@@ -11,11 +11,14 @@ TCEFORM {
 
     }
     tt_content {
-
+        frame_class {
+            addItems {
+                tron-ribbon = TRON Ribbon Card
+            }
+        }
     }
 }
 
 TCEMAIN {
 
 }
-

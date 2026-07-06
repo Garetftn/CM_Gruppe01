@@ -1,7 +1,6 @@
-page.logo.file: fileadmin/cm-logo.svg
+page.logo.file: fileadmin/user_upload/logo_NG_SL.svg
 page.theme.navigation.dropdown.icon.width: 20
 page.theme.navigation.dropdown.icon.height: 20
-page.theme.breadcrumb.enable: false
 page.theme.breadcrumb.icon.enable: false
 page.theme.navigation.icon.width: 25
 page.theme.navigation.icon.height: 25
@@ -11,5 +10,13 @@ plugin.tx_powermail.settings.styles.framework.submitClasses: 'btn btn-secondary 
 plugin.tx_powermail.settings.styles.framework.labelClasses: 'form-label powermail_label mt-3'
 plugin.tx_powermail.settings.styles.framework.numberOfColumns: 1
 plugin.tx_powermail.settings.styles.framework.fieldAndLabelWrappingClasses: col-md-10
-plugin.bootstrap_package.settings.scss.font-family-sans-serif: '"#{$google-webfont}", inter'
 page.theme.googleFont.font: Inter
+plugin.bootstrap_package.settings.scss.secondary: '#02154f'
+plugin.bootstrap_package.settings.scss.primary: '#061830'
+page.theme.contact.button.colorClass: secondary
+plugin.bootstrap_package.settings.scss.link-shade-percentage: 60%
+page.logo.linktitle: 'Portfolio Webseite'
+page.logo.alt: logo
+page.logo.height: 300
+page.logo.width: 300
+page.logo.fileInverted: fileadmin/user_upload/logo_NG_SL.svg
